@@ -40,11 +40,10 @@ export default function MapView({ simState, activePollutant, showHeatmap, showWi
       attributionControl: true,
     });
 
-    // Dark tile layer
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-      attribution: '© OpenStreetMap © CartoDB',
-      maxZoom: 18,
-    }).addTo(map);
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; OpenStreetMap contributors',
+  maxZoom: 19,
+}).addTo(map);
 
     // Canvas overlay for heatmap
     const canvas = L.canvas({ padding: 0.5 });
